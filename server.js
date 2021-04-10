@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const { exec } = require('child_process');
+require('dotenv').config()
 const axios = require('axios');
 
 const app = express();
@@ -28,7 +29,7 @@ app.post('/docker', (req, res) => {
     ecrURL = data.ecrURL.substring(0, data.ecrURL.length -1)
   }
   const myShellScript = exec(`sh ./build_docker.sh ${artifactLocation} ${name.toLowerCase()} ${ecrURL} us-east-1 > logs.txt`, (error, stdout, stderr) => {
-    axios.post('http://ec2-3-223-6-95.compute-1.amazonaws.com:8000/deploy-webhook', {ecrUrl: data.ecrURL,name: data.name})
+    axios.post(`${MLFLOW_HOSTER_URL}/deploy-webhook`, {ecrUrl: data.ecrURL,name: data.name})
   });
   res.send("STARTED the process");
   return;
