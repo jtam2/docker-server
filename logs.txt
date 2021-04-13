@@ -1,0 +1,30 @@
+Authenticating docker with AWS
+Login Succeeded
+Building docker image from given s3 uri: 
+s3://verisk-trial/models/0/5efe0050c8f640188a4db6abe2a18d35/
+name: 
+foobar
+ecr URL: 
+383367762271.dkr.ecr.us-east-1.amazonaws.com
+Creating ECR repo for image
+{
+    "repository": {
+        "repositoryArn": "arn:aws:ecr:us-east-1:198419144725:repository/foobar",
+        "registryId": "198419144725",
+        "repositoryName": "foobar",
+        "repositoryUri": "198419144725.dkr.ecr.us-east-1.amazonaws.com/foobar",
+        "createdAt": "2021-04-12T21:15:58-06:00",
+        "imageTagMutability": "MUTABLE",
+        "imageScanningConfiguration": {
+            "scanOnPush": false
+        },
+        "encryptionConfiguration": {
+            "encryptionType": "AES256"
+        }
+    }
+}
+Tagging docker image:
+Pushing docker image:
+Push successful
+Image exists at:
+383367762271.dkr.ecr.us-east-1.amazonaws.com/foobar:latest

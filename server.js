@@ -21,6 +21,7 @@ app.post('/docker', (req, res) => {
   let data = req.body
   let artifactLocation = data.artifactLocation
   let name = data.name
+  console.log(req)
   if (data.artifactLocation[data.artifactLocation.length - 1] !== '/'){
     artifactLocation = data.artifactLocation + '/'
   }
