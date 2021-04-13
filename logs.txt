@@ -7,24 +7,9 @@ foobar
 ecr URL: 
 383367762271.dkr.ecr.us-east-1.amazonaws.com
 Creating ECR repo for image
-{
-    "repository": {
-        "repositoryArn": "arn:aws:ecr:us-east-1:198419144725:repository/foobar",
-        "registryId": "198419144725",
-        "repositoryName": "foobar",
-        "repositoryUri": "198419144725.dkr.ecr.us-east-1.amazonaws.com/foobar",
-        "createdAt": "2021-04-12T21:15:58-06:00",
-        "imageTagMutability": "MUTABLE",
-        "imageScanningConfiguration": {
-            "scanOnPush": false
-        },
-        "encryptionConfiguration": {
-            "encryptionType": "AES256"
-        }
-    }
-}
 Tagging docker image:
 Pushing docker image:
+The push refers to repository [383367762271.dkr.ecr.us-east-1.amazonaws.com/foobar]
 Push successful
 Image exists at:
 383367762271.dkr.ecr.us-east-1.amazonaws.com/foobar:latest
